@@ -1,0 +1,6 @@
+{
+  "CLIENT_STATIC_JS": "/static/js",
+  "CLIENT_STATIC_CSS": "/static/css",
+  "CLIENT_STATIC_MEDIA": "/static/media",
+  "STATIC_ASSETS": "/static/assets"
+}
