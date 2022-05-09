@@ -1,9 +1,17 @@
 [
     {
+        "id": 1,
         "username": "admin",
         "password": "admin",
         "fullname": "Murat Cem YALIN",
         "active": true,
-        "refreshToken": "01f8a239-faed-418d-9286-8a51c1b298ac"
+        "refreshToken": "bdb8139b-aa5e-442d-851b-d00f5b548a30"
+    },
+    {
+        "username": "muratcem",
+        "password": "123",
+        "fullname": "Murat Cem YALIN",
+        "active": true,
+        "id": 2
     }
 ]

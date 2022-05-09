@@ -47,7 +47,7 @@ def get_post(class_name: str):
     return Response(result_string, mimetype='application/json')
 
 
-@bp.route('/<string:class_name>/<int:id>', methods=['GET', 'PUT', 'DELETE'])
+@bp.route('/<string:class_name>/<int:config_id>', methods=['GET', 'PUT', 'DELETE'])
 def get_put_delete(class_name: str, config_id: int):
     instance, method_names = get_instance(class_name=class_name)
     if instance is None:

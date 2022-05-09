@@ -9,7 +9,7 @@ class Validator:
         self.NUMBER_REGEX = "^[0-9]{0,10}$"
         self.SIZE_REGEX = "^([1-9]|[1][0-9]|2[0])$"
         self.ALLOWDENY_REGEX = "^(allow|deny)$"
-        self.NAME_REGEX = "^[a-zA-Z0-9ğüşöçıİĞÜŞÖÇI_-]{0,256}$"
+        self.NAME_REGEX = "^[a-zA-Z0-9ğüşöçıİĞÜŞÖÇI _-]{0,256}$"
         self.FILE_NAME_REGEX = "^[^\\\\\\/:\\*\\!?`'&$;\"<>\\|]+$"
         self.PASSWORD_REGEX = "^.*$"
         self.EMAIL_REGEX = "^[a-zA-Z0-9.!#$%&'*+\\/=?^_`{|}~-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"

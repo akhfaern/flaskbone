@@ -83,7 +83,8 @@ class BaseDataClass:
 
     def __validate_str(self, v: str, value: str, validation_rule: Union[str, tuple], v_key: str = None) -> bool:
         validation_rule, is_required = BaseDataClass.__check_is_required(validation_rule=validation_rule)
-        if (is_required == "REQUIRED" or self.__check_required_condition(is_required)) and str(value).strip() == "":
+        if (is_required == "REQUIRED" or self.__check_required_condition(is_required)) and (str(value).strip() == "" or
+                                                                                            value is None):
             self.__add_validation_error(v, "Value is required", v_key)
             return False
         if value is not None and str(value).strip() != "" and not self.__validator.validate(str(value),
