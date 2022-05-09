@@ -17,7 +17,12 @@ flask run
 
 Windows
 ```
+CMD
 set FLASK_APP=fb
+
+PS
+$env:FLASK_APP = "fb"
+
 flask run
 ```
 
