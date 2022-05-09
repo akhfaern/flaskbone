@@ -1,4 +1,4 @@
-# flaskbone
+# FlaskBone
 
 A simple base application to be used in flask projects 
 
@@ -15,10 +15,11 @@ A simple base application to be used in flask projects
 - auth header: Authorization: Bearer token
 - sample api end point: /user_management
 
-# sample request
+# Sample Requests
 
 # login 
 POST http://127.0.0.1:5000/auth/login
+
 {
     "username": "admin",
     "password": "admin"
@@ -27,15 +28,20 @@ POST http://127.0.0.1:5000/auth/login
 response: 
 {
   "errorCode": 0,
-  "refreshToken": "bdb8139b-aa5e-442d-851b-d00f5b548a30",
+  "refreshToken": "refresh-token",
   "token": "token"
 }
 
 # user list
 GET http://127.0.0.1:5000/user_management
 
+Header: Authorization Bearer token
+
 # add user 
 POST http://127.0.0.1:5000/user_management
+
+Header: Authorization Bearer token
+
 {
     "username": "muratcem",
     "password": "123",
@@ -45,3 +51,5 @@ POST http://127.0.0.1:5000/user_management
 
 # delete user
 DELETE POST http://127.0.0.1:5000/user_management/2
+
+Header: Authorization Bearer token
