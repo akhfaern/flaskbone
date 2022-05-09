@@ -15,7 +15,7 @@ import inspect
 bp = Blueprint('generic', __name__, url_prefix='/')
 
 
-def get_instance(class_name: str):
+def get_instance(class_name: str) -> tuple:
     class_path = path.join(HOME_DIR, "lib", f"{class_name}.py")
     if not path.exists(class_path):
         return None, None
