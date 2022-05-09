@@ -19,7 +19,7 @@ class Validator:
         self.NO_SPECIAL_CHAR_REGEX = "^[a-zA-Z0-9_.()-]{1,48}$"
         self.IP_CIDR = "^([0-9]{1,3}.){3}[0-9]{1,3}($|/(16|24|32))$"
 
-    def test_string(self, test_string: str, pattern: str):
+    def test_string(self, test_string: str, pattern: str) -> bool:
         p = re.compile(self.__dict__.get(pattern), re.IGNORECASE)
         matched = p.match(str(test_string))
         return bool(matched)

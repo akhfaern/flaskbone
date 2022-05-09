@@ -12,7 +12,6 @@ def create_app():
     CORS(app)
     app.wsgi_app = AuthGuard(app.wsgi_app)
     app.config.from_file("config.json", load=json.load)
-    # create_directories(app.config)
 
     from . import generic_blue_print, auth
     app.register_blueprint(generic_blue_print.bp)

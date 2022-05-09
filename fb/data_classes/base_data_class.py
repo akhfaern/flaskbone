@@ -23,7 +23,7 @@ class BaseDataClass:
                 r_dict[v] = self.__data.get(v)
         return r_dict
 
-    def __add_validation_error(self, v: str, error_value: str, v_key: str = None):
+    def __add_validation_error(self, v: str, error_value: str, v_key: str = None) -> None:
         if v_key is not None:
             if v not in self.__validation_errors:
                 self.__validation_errors[v] = {}
@@ -32,7 +32,7 @@ class BaseDataClass:
             self.__validation_errors[v] = error_value
 
     @staticmethod
-    def __check_is_required(validation_rule: Union[str, tuple]):
+    def __check_is_required(validation_rule: Union[str, tuple]) -> tuple:
         if type(validation_rule) is not tuple:
             return validation_rule, "NOTREQUIRED"
         return validation_rule

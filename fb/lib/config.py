@@ -5,7 +5,7 @@ from fb.constants import HOME_DIR
 
 
 class Config:
-    def __init__(self, dir_path, config_name) -> None:
+    def __init__(self, dir_path: str, config_name: str) -> None:
         self.config = []
         self.config_file = join(HOME_DIR, dir_path, config_name)
         self.logger = FlaskBoneLogger.get_logger(name="flaskbone")
@@ -34,7 +34,7 @@ class Config:
             return True
         except Exception as e:
             self.logger.error(f"Error while writing file. Error: {e}")
-            return False
+        return False
 
     def get_list(self) -> list:
         return self.config
@@ -43,7 +43,7 @@ class Config:
         current_id = 0
         for c in self.config:
             if int(c.get("id")) > current_id:
-                current_id = c.get("id")
+                current_id = int(c.get("id"))
         current_id += 1
         return current_id
 

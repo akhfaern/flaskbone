@@ -21,5 +21,5 @@ class FlaskBoneLogger:
         logger.addHandler(handler)
 
     @staticmethod
-    def get_logger(name):
+    def get_logger(name: str) -> logging.Logger:
         return logging.getLogger(name)
