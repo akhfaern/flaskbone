@@ -7,37 +7,52 @@ A simple base application to be used in flask projects
 - python data validation for requests with base data class and validation
 
 
-# usage
+## Usage
 
-- export FLASK_APP=fb or for windows set FLASK_APP=fb
-- flask run
-- login url: /auth/login
-- auth header: Authorization: Bearer token
-- sample api end point: /user_management
+Linux / MacOs 
+```
+export FLASK_APP=fb
+```
+
+Windows
+```
+set FLASK_APP=fb
+```
+
+```
+flask run
+```
 
 # Sample Requests
 
-# login 
+## Login
+```
 POST http://127.0.0.1:5000/auth/login
 
 {
     "username": "admin",
     "password": "admin"
 }
+```
 
+```
 response: 
 {
   "errorCode": 0,
   "refreshToken": "refresh-token",
   "token": "token"
 }
+```
 
-# user list
+## Get User List
+```
 GET http://127.0.0.1:5000/user_management
 
 Header: Authorization Bearer token
+```
 
-# add user 
+## Add user 
+```
 POST http://127.0.0.1:5000/user_management
 
 Header: Authorization Bearer token
@@ -48,8 +63,11 @@ Header: Authorization Bearer token
     "fullname": "Murat Cem YALIN",
     "active": true
 }
+```
 
-# delete user
+## Delete user
+```
 DELETE POST http://127.0.0.1:5000/user_management/2
 
 Header: Authorization Bearer token
+```

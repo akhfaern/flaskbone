@@ -1,3 +1,9 @@
+"""
+Author: Murat Cem YALIN
+https://github.com/akhfaern/pythonDataValidation
+License: MIT
+"""
+
 from typing import Union
 
 from fb.data_classes.validator import Validator
