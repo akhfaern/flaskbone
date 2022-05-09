@@ -1,3 +1,9 @@
+"""
+Author: Murat Cem YALIN
+https://github.com/akhfaern/pythonDataValidation
+License: MIT
+"""
+
 from flask import Blueprint, request, Response, abort
 from os import path
 import json

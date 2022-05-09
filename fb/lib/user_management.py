@@ -1,3 +1,9 @@
+"""
+Author: Murat Cem YALIN
+https://github.com/akhfaern/flaskbone
+License: MIT
+"""
+
 from fb.lib.base_request_class import BaseRequestClass
 from fb.lib.config import Config
 from fb.data_classes.user_data import UserData
