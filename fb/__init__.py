@@ -3,19 +3,10 @@ from fb.lib.logger import FlaskBoneLogger
 from flask_cors import CORS
 from fb.auth_guard import AuthGuard
 import json
-import sys
 
 
 def create_app():
-    logger_config = {
-        "service": {
-            "name": "flaskbone"
-        },
-        "log_format": "cef",
-        "log_level": "critical",
-        "log_file": "flaskbone"
-    }
-    _ = FlaskBoneLogger(logger_config)
+    _ = FlaskBoneLogger()
 
     app = Flask(__name__, instance_relative_config=True)
     CORS(app)

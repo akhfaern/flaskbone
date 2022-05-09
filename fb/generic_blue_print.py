@@ -48,18 +48,18 @@ def get_post(class_name: str):
 
 
 @bp.route('/<string:class_name>/<int:id>', methods=['GET', 'PUT', 'DELETE'])
-def get_put_delete(class_name: str, id: int):
+def get_put_delete(class_name: str, config_id: int):
     instance, method_names = get_instance(class_name=class_name)
     if instance is None:
         abort(404)
     result = {}
     if request.method == 'GET' and 'get' in method_names:
-        result = instance.get(id)
+        result = instance.get(config_id)
     elif request.method == 'PUT' and 'put' in method_names:
         json_data = request.get_json()
         result = instance.put(json_data)
     elif request.method == 'DELETE' and 'delete' in method_names:
-        result = instance.delete(id)
+        result = instance.delete(config_id)
     else:
         abort(405)
     result_string = json.dumps(result)
