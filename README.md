@@ -1,7 +1,8 @@
 # FlaskBone
 
-A simple base application to be used in flask projects 
+A simple base application to be used in flask api projects 
 
+- api based structure
 - user authentication 
 - auto routing with generic blueprint and base request class
 - python data validation for requests with base data class and validation
@@ -25,6 +26,11 @@ $env:FLASK_APP = "fb"
 
 flask run
 ```
+
+## Data classes
+To create new end point, just create a class that extends BaseRequestClass inside lib folder. That class needs to handle
+get, post, put and delete methods. if you want to write data, use BaseDataClass. further example about BaseDataClass could
+be found in [pythonDataValidation](https://github.com/akhfaern/pythonDataValidation)
 
 # Sample Requests
 
