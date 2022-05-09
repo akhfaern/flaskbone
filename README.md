@@ -12,14 +12,12 @@ A simple base application to be used in flask projects
 Linux / MacOs 
 ```
 export FLASK_APP=fb
+flask run
 ```
 
 Windows
 ```
 set FLASK_APP=fb
-```
-
-```
 flask run
 ```
 
