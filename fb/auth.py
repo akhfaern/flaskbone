@@ -20,7 +20,7 @@ def login():
         if user is None:
             mlogger.error("User Login error: {0} not found".format(username))
             return Response(json.dumps({'error': 'incorrect_user_pass'}), mimetype='application/json')
-        if user.get('active') is not True:
+        if not user.get('active'):
             mlogger.error("User Login error: {0} is passive".format(username))
             return Response(json.dumps({'error': 'incorrect_user_pass'}), mimetype='application/json')
         if password == user.get('password'):
